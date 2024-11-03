@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 apiVersion: v1
 kind: Service
 metadata:
@@ -9,4 +10,17 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 80
+=======
+apiVersion: v1
+kind: Service
+metadata:
+  name: fib-proper-service
+spec:
+  selector:
+    app: fib-proper
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+>>>>>>> 984116590b372c42be01395146a901379956eda7
   type: ClusterIP

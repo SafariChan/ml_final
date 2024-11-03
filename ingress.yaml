@@ -1,0 +1,28 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: fib-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+    - host: proper.fibonacci.local
+      http:
+        paths:
+          - path: /fib
+            pathType: Prefix
+            backend:
+              service:
+                name: fib-proper-service
+                port:
+                  number: 80
+    - host: fallback.fibonacci.local
+      http:
+        paths:
+          - path: /fib
+            pathType: Prefix
+            backend:
+              service:
+                name: fib-fallback-service
+                port:
+                  number: 80

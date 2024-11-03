@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fib-proper
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fib-proper
+  template:
+    metadata:
+      labels:
+        app: fib-proper
+    spec:
+      containers:
+        - name: fib-proper
+          image: fib-proper:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 5000
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 5000
+            initialDelaySeconds: 10
+            periodSeconds: 5
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 5000
+            initialDelaySeconds: 5
+            periodSeconds: 5

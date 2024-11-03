@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fib-fallback
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fib-fallback
+  template:
+    metadata:
+      labels:
+        app: fib-fallback
+    spec:
+      containers:
+      - name: fib-fallback
+        image: fib-fallback:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 5000

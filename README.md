@@ -1,4 +1,4 @@
-In this project, we have developed a Machine Learning (ML) service to predict Fibonacci numbers using a Linear Regression model. The main objective of this task was to create an ML service that can solve a specific problem by leveraging a trained model and exposing it via a web service. The solution is designed to be scalable, reliable, and fault-tolerant.
+In this project, I have developed a Machine Learning (ML) service to predict Fibonacci numbers using a Linear Regression model. The main objective of this task was to create an ML service that can solve a specific problem by leveraging a trained model and exposing it via a web service. The solution is designed to be scalable, reliable, and fault-tolerant.
 
 Task Definition
 Problem Statement: The task is to predict the Fibonacci numbers based on the index position in the sequence. Given an index n, the goal is to predict the corresponding Fibonacci number at that position.
@@ -14,8 +14,8 @@ Copy code
 }
 Approach:
 
-The task is solved using a Linear Regression model. Although Fibonacci numbers are based on a recursive pattern, we use Linear Regression for simplicity and demonstration purposes. In this case, the model learns to predict Fibonacci numbers based on the index in the sequence.
-We use a dataset of Fibonacci numbers up to the 50th index, which is used to train the model.
+The task is solved using a Linear Regression model. Although Fibonacci numbers are based on a recursive pattern, I use Linear Regression for simplicity and demonstration purposes. In this case, the model learns to predict Fibonacci numbers based on the index in the sequence.
+I use a dataset of Fibonacci numbers up to the 50th index, which is used to train the model.
 Fallback Solution: A simple fallback solution (such as a pre-calculated Fibonacci lookup table) can be used in case the model experiences issues, ensuring reliability and availability of the service.
 Dataset
 Dataset: Generate a dataset containing the first 50 Fibonacci numbers. The dataset is structured with two columns: index (representing the position in the sequence) and value (the corresponding Fibonacci number).
